@@ -3,8 +3,8 @@ package parameta.prueba.tecnica.servicioRest.application;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 import parameta.prueba.tecnica.servicioRest.domain.entity.Employee;
-import parameta.prueba.tecnica.servicioRest.domain.ports.in.CreateEmployeeServicePort;
-import parameta.prueba.tecnica.servicioRest.domain.ports.out.SaveEmployeePort;
+import parameta.prueba.tecnica.servicioRest.application.ports.in.CreateEmployeeServicePort;
+import parameta.prueba.tecnica.servicioRest.application.ports.out.SaveEmployeePort;
 
 import java.util.Date;
 

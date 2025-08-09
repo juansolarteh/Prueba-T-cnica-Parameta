@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import parameta.prueba.tecnica.servicioRest.domain.constants.EmployeeProperties;
 import parameta.prueba.tecnica.servicioRest.domain.entity.Employee;
-import parameta.prueba.tecnica.servicioRest.domain.ports.in.CreateEmployeeServicePort;
+import parameta.prueba.tecnica.servicioRest.application.ports.in.CreateEmployeeServicePort;
 import parameta.prueba.tecnica.servicioRest.infrastructure.httpController.DTOs.EmployeeResponseDTO;
 import parameta.prueba.tecnica.servicioRest.infrastructure.httpController.DTOs.HttpResponseDTO;
 import parameta.prueba.tecnica.servicioRest.infrastructure.httpController.mapper.EmployeeResponseDTOMapper;

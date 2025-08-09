@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           targetNamespace="http://parameta.prueba.tecnica/employee"
+           elementFormDefault="qualified">
+
+    <xs:element name="SaveEmployeeRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="name" type="xs:string"/>
+                <xs:element name="lastName" type="xs:string"/>
+                <xs:element name="documentType" type="xs:string"/>
+                <xs:element name="documentNumber" type="xs:string"/>
+                <xs:element name="birthDate" type="xs:date"/>
+                <xs:element name="joiningDate" type="xs:date"/>
+                <xs:element name="position" type="xs:string"/>
+                <xs:element name="salary" type="xs:decimal"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="SaveEmployeeResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="employeeId" type="xs:long"/>
+                <xs:element name="message" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+</xs:schema>

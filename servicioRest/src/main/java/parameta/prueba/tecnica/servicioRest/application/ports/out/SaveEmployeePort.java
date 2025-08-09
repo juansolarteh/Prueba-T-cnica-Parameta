@@ -1,4 +1,4 @@
-package parameta.prueba.tecnica.servicioRest.domain.ports.out;
+package parameta.prueba.tecnica.servicioRest.application.ports.out;
 
 import parameta.prueba.tecnica.servicioRest.domain.entity.Employee;
 
