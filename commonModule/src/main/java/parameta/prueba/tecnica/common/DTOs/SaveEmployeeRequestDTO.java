@@ -12,6 +12,7 @@ import java.util.Date;
 @XmlRootElement(name = "SaveEmployeeRequest")
 @Data
 @NoArgsConstructor
+@AllArgsConstructor
 public class SaveEmployeeRequestDTO {
     private String name;
     private String lastName;

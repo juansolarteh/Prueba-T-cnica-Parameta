@@ -1,5 +1,6 @@
 package parameta.prueba.tecnica.servicioRest.infrastructure.soapClient;
 
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.oxm.jaxb.Jaxb2Marshaller;
@@ -9,6 +10,10 @@ import parameta.prueba.tecnica.common.DTOs.SaveEmployeeResponseDTO;
 
 @Configuration
 public class SoapClientConfig {
+
+    @Value("${soap.client.url}")
+    private String soapClientUrl;
+
     @Bean
     public Jaxb2Marshaller marshaller() {
         Jaxb2Marshaller marshaller = new Jaxb2Marshaller();
@@ -21,7 +26,7 @@ public class SoapClientConfig {
         WebServiceTemplate template = new WebServiceTemplate();
         template.setMarshaller(marshaller);
         template.setUnmarshaller(marshaller);
-        template.setDefaultUri("http://localhost:8080/ws");
+        template.setDefaultUri(soapClientUrl);
         return template;
     }
 }

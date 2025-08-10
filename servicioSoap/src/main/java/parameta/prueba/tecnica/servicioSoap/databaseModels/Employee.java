@@ -24,7 +24,7 @@ public class Employee {
     private String lastName;
     @Column(name = "tipo_documento", nullable = false)
     private String documentType;
-    @Column(name = "numero_documento", nullable = false, unique = true)
+    @Column(name = "numero_documento", nullable = false)
     private String documentNumber;
     @Column(name = "fecha_nacimiento", nullable = false)
     private Date birthDate;
