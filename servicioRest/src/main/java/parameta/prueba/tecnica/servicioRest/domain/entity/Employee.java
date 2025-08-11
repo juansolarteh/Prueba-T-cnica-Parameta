@@ -70,7 +70,8 @@ public class Employee {
     }
 
     public Period getEmploymentDuration() {
-        return calculateCurrentPeriod(joiningDate);
+        if (joiningDate == null) return Period.ZERO;
+        return calculateCurrentPeriod(getJoiningDate());
     }
 
     private static Period calculateCurrentPeriod(Date startDate) {
