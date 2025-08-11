@@ -71,11 +71,7 @@ o ejecutando directamente los proyectos.
    git clone https://github.com/juansolarteh/Prueba-T-cnica-Parameta.git
    cd Prueba-T-cnica-Parameta
     ```
-2. Construir las imágenes Docker:
-    ```bash
-    docker-compose build
-    ```
-3. Levantar los contenedores:
+2. Construir las imágenes Docker y levantar contenedores (Asegurate de no tener en uso los puertos 8080 y 3306):
     ```bash
     docker-compose up
     ```
@@ -129,3 +125,8 @@ descomentar la sección de puertos en el archivo `docker-compose.yml` para expon
    Debe ejecutar este comando en dos terminales diferentes, una para cada servicio:
    
 Listo! Ahora ambos servicios están corriendo y puedes interactuar con ellos.
+
+Con esta url puedes probar el servicio
+http://localhost:8080/employee?Nombres=Juan&Apellidos=Solarte&Tipo de Documento=C.C.&Número de Documento=123456711&Fecha de Nacimiento=2007/08/08&Fecha de Vinculación a la Compañía=2025/07/07&Cargo=Desarrollador Sr&Salario=6000000
+
+**Nota:** Si cambias los puertos es necesario cambiar de igual forma el puerto http de la petición
