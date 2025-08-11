@@ -19,13 +19,6 @@
     </properties>
 
     <dependencies>
-        <!-- JAXB API -->
-        <dependency>
-            <groupId>jakarta.xml.bind</groupId>
-            <artifactId>jakarta.xml.bind-api</artifactId>
-            <version>${jaxb.api.version}</version>
-        </dependency>
-
         <!-- JAXB Runtime -->
         <dependency>
             <groupId>org.glassfish.jaxb</groupId>
