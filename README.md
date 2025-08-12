@@ -136,3 +136,30 @@ Con esta url puedes probar el servicio
 http://localhost:8080/employee?Nombres=Juan&Apellidos=Solarte&Tipo de Documento=C.C.&Número de Documento=123456711&Fecha de Nacimiento=2007/08/08&Fecha de Vinculación a la Compañía=2025/07/07&Cargo=Desarrollador Sr&Salario=6000000
 
 **Nota:** Si cambias los puertos es necesario cambiar de igual forma el puerto http de la petición
+
+Puedes probar los servicios desplegados en GCP con las siguientes urls
+REST:
+https://servicio-rest-508627893171.us-central1.run.app/employee?Nombres=Juan&Apellidos=Solarte&Tipo de Documento=C.C.&Número de Documento=123456711&Fecha de Nacimiento=2007/08/08&Fecha de Vinculación a la Compañía=2025/07/07&Cargo=Desarrollador Sr&Salario=600.5
+
+SOAP:
+https://servicio-soap-508627893171.us-central1.run.app/ws
+body:
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"
+                  xmlns:emp="http://parameta.prueba.tecnica/employee">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <emp:SaveEmployeeRequest>
+         <emp:name>Juan</emp:name>
+         <emp:lastName>Solarte</emp:lastName>
+         <emp:documentType>CC</emp:documentType>
+         <emp:documentNumber>12345678119</emp:documentNumber>
+         <emp:birthDate>1990-05-10</emp:birthDate>
+         <emp:joiningDate>2023-01-15</emp:joiningDate>
+         <emp:position>Desarrollador</emp:position>
+         <emp:salary>4500.50</emp:salary>
+      </emp:SaveEmployeeRequest>
+   </soapenv:Body>
+</soapenv:Envelope>
+headers:
+Content-Type:text/xml;charset=UTF-8
+SOAPAction:SaveEmployeeRequest
