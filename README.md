@@ -71,9 +71,15 @@ o ejecutando directamente los proyectos.
    git clone https://github.com/juansolarteh/Prueba-T-cnica-Parameta.git
    cd Prueba-T-cnica-Parameta
     ```
-2. Construir las imágenes Docker y levantar contenedores (Asegurate de no tener en uso los puertos 8080 y 3306):
+2. Construir y levantar el contenedor mysql (Asegúrate de no tener en uso el puerto 3306 o cambiar el puerto de salida de ser necesario)
     ```bash
-    docker-compose up
+    docker-compose up mysql -d
+    ```
+3. Construir las imágenes Docker y levantar los contenedores de los servicios (Asegúrate de no tener en uso el puerto 8080 o cambiar el puerto de salida de ser necesario)
+**Nota:** Debes asegurarte que este en ejecución el contenedor de mysql
+    ```bash
+    docker-compose up servicio-rest -d
+    docker-compose up servicio-soap -d
     ```
 Esto compilará y ejecutará ambos servicios junto con una instancia de MySQL configurada con los valores por defecto.
 
